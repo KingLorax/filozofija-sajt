@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filozofska Sekcija</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    	.navbar{margin-bottom: 0; background-color: black;}
+    	.jumbotron{background-color: transparent; color: white; height: 100vh}
+    	.img{max-height: 30vh}
+		.frosted-glass {
+		  width: 100vh;
+		  background: inherit;
+		  position: relative;
+		  z-index: 1;
+		  overflow: hidden;
+		  padding: 2rem;
+		  box-sizing: border-box;
+		  box-shadow: 0 .5em 1em rgba(0,0,0,.3);
+		}
+		.frosted-glass::before {
+		  content: "";
+		  position: absolute;
+		  z-index: -1;
+		  top: 0; right: 0; bottom: 0; left: 0;
+		  background: inherit;
+		  box-shadow: inset 0 0 3000px rgba(255,255,255,.5);
+		  filter: blur(10px);
+		  margin: -20px;
+		}
+    </style>
+    <script>
+    	var messages = ["Dobrodošli!", "Dobar dan!", "Volim Sofiju!"];
+    	function changeText() {
+    		var curMessage = Math.floor(Math.random() * messages.length);
+    		document.getElementById("poruka").innerHTML = messages[curMessage];
+    	}
+    </script>
+  </head>
+
+  <body onload="changeText();" style="background-image: url(3.jpg); background-attachment: fixed; background-position: center;">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Početna</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="novosti.html">Novosti</a></li>
+        <li><a href="desavanja.html">Dešavanja</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+	<div class="jumbotron text-center">
+	<center>
+		<div id="action" class="frosted-glass">
+				<h2>Blog</h2>
+
+				<hr>
+				<h3>Objavi blog</h3>
+				<form>
+					<div class="form-group">
+						<textarea type="text" class="form-control" placeholder="Tekst"></textarea>
+							<input type="file" id="kurac">
+					</div>
+				</form>
+		</div>
+	</center>
+	</div>
+
+	
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+
+</html>
