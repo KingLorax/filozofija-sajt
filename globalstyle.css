@@ -1,0 +1,32 @@
+.navbar{
+	margin-bottom: 0;
+	background-color: black;
+}
+
+.jumbotron{
+	background-color: transparent;
+	color: white;
+	height: 100vh;
+}
+.img{
+	max-height: 30vh
+}
+.body{
+	background-image: url(img/3.jpg);
+	background-attachment: fixed;
+	background-position: center;
+}
+.contentbody{
+	padding: 5px;
+	background-image: url(img/4.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	max-width: 30cm;
+	text-align: left;
+}
+p{
+  text-indent: 20px;
+}
+h2{
+	text-align: center;
+}
